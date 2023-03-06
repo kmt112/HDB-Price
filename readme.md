@@ -1,9 +1,11 @@
 # Resale HDB Pricing
 ## Introduction
-This repository contains the resale HDB pricing exploratory data analysis, resale housing prediction modelling and resale pricing. All data is taken from https://data.gov.sg/dataset/resale-flat-prices. I have also written a two part blog post on medium (https://medium.com/p/94ab708cccf8). However, since those were done previously, i have decided to make this repo usable for others. 
+This repository contains the resale HDB pricing exploratory data analysis, resale housing prediction modelling and resale pricing. All data is taken from https://data.gov.sg/dataset/resale-flat-prices. I have also written a two part blog post on medium (https://medium.com/p/94ab708cccf8). However, since those were done previously, i have decided to make this repo usable for others. Current Work in progress
+
+- [![Open_In_Colab][Open_In_Colab]][Open_In_Colab-url]
 
 ## Performance Metrics
-HDB pricing model is evaluated based on 
+HDB pricing model is chosen based on Mean Squared Error (MSE).
 
 ## Setup
 Do create a new virtual environment using the supplied requirements.txt to ensure that you have the required packages.
@@ -27,7 +29,6 @@ Once the virtual environment is set up, the folder structure is as such:
 - [![Flask][Flask]][flask-url]
 - [![Turborepo][Turborepo]][Turborepo-url]
 - [![FastAPI][FastAPI]][fastapi-url]
-- [![Open_In_Colab][Open_In_Colab]][Open_In_Colab-url]
 
 
 
