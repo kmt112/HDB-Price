@@ -34,24 +34,13 @@ Once the virtual environment is set up, the folder structure is as such:
 
 ### Steps
 #### Generating ensembled probabilities
-Utilising the time series classification APIs available in sktime, we methodically trained the APIs on each physiological signal and tested the models against 20% holdout data across 5 folds. (Certain datasets were too large to feasibly train on local machines. For these we only conducted 1 fold testing as each fold require up to 10 hours to run)
-
-Through this process, we optimised the hyperparameters and selected the best classifier for that particular physiological signal.
-
-Following this, the classifier with optimised parameters were used to generate the prediction probabilities for each physiological signal. The predictions of the five holdout sets of data was combined to one table. Here is an example generated for the ECG signal:
-
-![pred_proba](https://github.com/skulu/cogpilotdatachallenge/blob/main/readme_pics/prediction_probabilities.png)
-
-This was repeated for all the signals. The probabilities were joined on the `subject`, `difficulty` and `run` columns to form a large ensembled table.
 
 #### Training models to generate probabilities from evaluation dataset
-With the optimised classifiers and hyperparameters found in the previous section, we trained the classifiers on the entire physiological signal training set for each signal. These models were then used on the evaluation datasets to generate the probabilities like the above picture and once again ensembled across all physiological signals.
 
-With these probabilities we now have a training set of ensembled probabilities and an evaluation set of ensembled probabilities with all physiological signals included.
 
 
 ## Results
-The fully trained model on the 4 important signals was applied to the evaluation data set and we are now pending the results of the competition.
+
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
