@@ -1,6 +1,6 @@
 # Resale HDB Pricing
 ## Introduction
-This repository contains the resale HDB pricing exploratory data analysis, resale housing prediction modelling and resale pricing. All data is taken from https://data.gov.sg/dataset/resale-flat-prices. I have also written a two part blog post on medium (https://medium.com/p/94ab708cccf8). However, since those were done previously, i have decided to make this repo usable for others who wish to have an API. 
+This repository contains the resale HDB pricing exploratory data analysis, resale housing prediction modelling and resale pricing. All data is taken from https://data.gov.sg/dataset/resale-flat-prices. I have also written a two part blog post on medium (https://medium.com/p/94ab708cccf8). However, since those were done previously, i have decided to make this repo usable for others. 
 
 ## Performance Metrics
 HDB pricing model is evaluated based on 
@@ -27,6 +27,7 @@ Once the virtual environment is set up, the folder structure is as such:
 - [![Flask][Flask]][flask-url]
 - [![Turborepo][Turborepo]][Turborepo-url]
 - [![FastAPI][FastAPI]][fastapi-url]
+- [![Open_In_Colab][Open_In_Colab]][Open_In_Colab-url]
 
 
 
@@ -64,3 +65,5 @@ The fully trained model on the 4 important signals was applied to the evaluation
 [Turborepo-url]: https://turbo.build/
 [FastAPI]: https://camo.githubusercontent.com/81b1b79330b1154fc0743b25327cbfd6282a7bf37e8d0b48278dc57528b2517c/68747470733a2f2f696d672e736869656c64732e696f2f7374617469632f76313f7374796c653d666f722d7468652d6261646765266d6573736167653d4661737441504926636f6c6f723d303039363838266c6f676f3d46617374415049266c6f676f436f6c6f723d464646464646266c6162656c3d
 [fastapi-url]: https://fastapi.tiangolo.com/
+[Open_In_Colab]: https://colab.research.google.com/assets/colab-badge.svg
+[Open_In_Colab-url]: https://colab.research.google.com/drive/1aeDdsbgU66_Nx3wUURgXcjgX3s-1Qfyb?authuser=1#scrollTo=qRA0dBU_odU3
