@@ -2,3 +2,7 @@ final_columns.csv
 hdb_model.bst
 dataPackage/primary_hdb.pickle
 dataPackage/final_mrt_list.csv
+Final_HDB_Nerual_Network.ipynb
+Forrest_type.ipynb
+HDBnet_Modelling.ipynb
+HousingPrices_nn.ipynb

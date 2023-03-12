@@ -30,12 +30,12 @@ async def get_random():
     return {'number': rn , 'limit':100}
 
 @app.post("/predict/")
-async def create_item(item: Item):
+async def prediction(item: Item):
     #getting address
     address_name = item.address_name
     shortest_cbd_area, shortest_primary_distance, shortest_mrt_distance = get_shortest_distance(address_name)
     json_compatible_item_data = jsonable_encoder(item)
     predicted_price = transform(json_compatible_item_data,shortest_cbd_area, shortest_primary_distance, shortest_mrt_distance)
     # transform(item)
-    return predicted_price.tolist()
+    return predicted_price.tolist()[0]
 
