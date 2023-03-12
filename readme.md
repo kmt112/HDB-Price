@@ -2,10 +2,14 @@
 ## Introduction
 This repository contains the resale HDB pricing exploratory data analysis, resale housing prediction modelling and resale pricing. All data is taken from https://data.gov.sg/dataset/resale-flat-prices. I have also written a two part blog post on medium (https://medium.com/p/94ab708cccf8). However, since those were done previously, i have decided to make this repo usable for others. Current Work in progress
 
+
+## Data Cleaning
+This notebook creates new coordinates for all addresses (utilizing onemap API). The new coordinates are then used to calculate the closest distance between the HDB to closest MRT, Primary school and CDB area.
 - [![Open_In_Colab][Open_In_Colab]][Open_In_Colab-url]
 
-## Performance Metrics
-HDB pricing model is chosen based on Mean Squared Error (MSE).
+## Modelling
+This notebook generates the final model used. 
+- [![Open_In_Colab][Open_In_Colab]][Open_In_Colab-url_modelling]
 
 ## Setup
 Do create a new virtual environment using the supplied requirements.txt to ensure that you have the required packages.
@@ -57,3 +61,4 @@ Once the virtual environment is set up, the folder structure is as such:
 [fastapi-url]: https://fastapi.tiangolo.com/
 [Open_In_Colab]: https://colab.research.google.com/assets/colab-badge.svg
 [Open_In_Colab-url]: https://colab.research.google.com/drive/1aeDdsbgU66_Nx3wUURgXcjgX3s-1Qfyb?authuser=1#scrollTo=qRA0dBU_odU3
+[Open_In_Colab-url_modelling]: https://colab.research.google.com/drive/1ZYWHqRLk3fK2UIPVykvlfYOMJgCEju_2?authuser=1
