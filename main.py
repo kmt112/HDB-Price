@@ -3,7 +3,7 @@ from fastapi.encoders import jsonable_encoder
 import random
 from pydantic import BaseModel
 from typing import Union
-from Xformer import transform
+from Xformer import transform, get_shortest_distance
 
 class Item(BaseModel):
     town: str
@@ -12,9 +12,10 @@ class Item(BaseModel):
     flat_model: str
     remaining_lease: float
     storey: float
-    shortest_mrt_distance: float
-    shortest_primary_distance: float
-    shortest_cbd_distance: float
+    address_name: str
+    # shortest_mrt_distance: float
+    # shortest_primary_distance: float
+    # shortest_cbd_distance: float
 
 app = FastAPI()
 
@@ -28,10 +29,13 @@ async def get_random():
     rn: int=random.randint(0,100)
     return {'number': rn , 'limit':100}
 
-@app.post("/items/")
+@app.post("/predict/")
 async def create_item(item: Item):
+    #getting address
+    address_name = item.address_name
+    shortest_cbd_area, shortest_primary_distance, shortest_mrt_distance = get_shortest_distance(address_name)
     json_compatible_item_data = jsonable_encoder(item)
-    x = transform(json_compatible_item_data)
+    predicted_price = transform(json_compatible_item_data,shortest_cbd_area, shortest_primary_distance, shortest_mrt_distance)
     # transform(item)
-    return "hello"
+    return predicted_price.tolist()
 
