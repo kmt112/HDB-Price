@@ -5,10 +5,22 @@ This repository contains the resale HDB pricing exploratory data analysis, resal
 
 ## Data Cleaning
 This notebook creates new coordinates for all addresses (utilizing onemap API). The new coordinates are then used to calculate the closest distance between the HDB to closest MRT, Primary school and CDB area.
+
+```
+├── drive
+│   ├── MyDrive
+│   │   ├── Projects
+│   │       ├── HDB
+                ├── models
+                ├── resale-flat-prices-based-on-approval-date-2000-feb-2012.csv
+                ├── List_of_primary_schools_in_Singapore_1.csv
+                ├── mrt_lrt_data.csv
+```
+
 - [![Open_In_Colab][Open_In_Colab]][Open_In_Colab-url]
 
 ## Modelling
-This notebook generates the final model used. 
+This notebook generates the final model used. to be updated with insights, local explaination and Local Interpretable Model-agnostics Explainations
 - [![Open_In_Colab][Open_In_Colab]][Open_In_Colab-url_modelling]
 
 ## Setup
@@ -16,14 +28,13 @@ Do create a new virtual environment using the supplied requirements.txt to ensur
 
 Once the virtual environment is set up, the folder structure is as such:
 ```
-├── Main
-│   ├── Code
-│   │   ├── Submission.ipynb
-│   │   ├── helperfunction.py
+├── HDB-Price
+│   ├── Main.py
+│   ├── readme.md
+│   ├── Xformer.py
 │   ├── dataPackage
-│   │   ├── HDB_Data.CSV
-│   ├── dataPackageEval
-│   │   ├── EvalSet_StartEndTimes.csv
+│   │   ├── final_mrt_list.csv
+│   │   ├── primary_hdb.pickle
 ```
 
 ### Built With
