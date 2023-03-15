@@ -17,7 +17,7 @@ class Item(BaseModel):
     # shortest_primary_distance: float
     # shortest_cbd_distance: float
 
-app = FastAPI()
+app = FastAPI(title = "HDB_resale_price_RESTAPI")
 
 
 @app.get('/')
