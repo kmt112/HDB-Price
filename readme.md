@@ -35,6 +35,8 @@ Once the virtual environment is set up, the folder structure is as such:
 │   ├── dataPackage
 │   │   ├── final_mrt_list.csv
 │   │   ├── primary_hdb.pickle
+│   │   ├── final_columns.pickle
+│   │   ├── hdb_model.bst
 ```
 
 ### Built With
