@@ -2,7 +2,7 @@
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 # More info on Python, GitHub Actions, and Azure App Service: https://aka.ms/python-webapps-actions
 
-name: Build and deploy Python app to Azure Web App - km-test-app
+name: Build and deploy Python app to Azure Web App - km-home-app
 
 on:
   push:
@@ -53,19 +53,11 @@ jobs:
         with:
           name: python-app
           path: .
-      - uses: azure/login@v1
-        with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
-      - name: Stop webapp for FastAPI
-        run: |
-          az webapp stop --name km-test-app --resource-group oliver-test-rg
+          
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
         id: deploy-to-webapp
         with:
-          app-name: 'km-test-app'
+          app-name: 'km-home-app'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_20E92C9DF2B7434988D8F93EE268BACF }}
-      - name: Start webapp for FastAPI
-        run: |
-          az webapp start --name km-test-app --resource-group oliver-test-rg
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_3FCEB24A6C2D4BE790B61AB5667C1D99 }}
