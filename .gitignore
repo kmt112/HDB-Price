@@ -1,6 +1,3 @@
-final_columns.csv
-dataPackage/primary_hdb.pickle
-dataPackage/final_mrt_list.csv
 Final_HDB_Nerual_Network.ipynb
 Forrest_type.ipynb
 HDBnet_Modelling.ipynb
