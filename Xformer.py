@@ -112,14 +112,14 @@ def get_shortest_distance(address_name):
 
 def transform(items,shortest_cbd_distance, shortest_primary_distance, shortest_mrt_distance):
     df = pd.DataFrame(items, index=[0])
-    dummies_frame = pd.read_csv("final_columns.csv")
+    dummies_frame = pd.read_csv("dataPackage/final_columns.csv")
     df["shortest_mrt_distance"] = shortest_mrt_distance
     df["shortest_primary_distance"] = shortest_primary_distance
     df["shortest_cbd_distance"] = shortest_cbd_distance
     # print(df.reindex(columns = dummies_frame.columns, fill_value=0))
     new_item = pd.get_dummies(df).reindex(columns=dummies_frame.columns,fill_value=0)
     xgb_model = xgb.Booster()
-    xgb_model.load_model("hdb_model.bst")
+    xgb_model.load_model("dataPackage/hdb_model.bst")
     xginput = xgb.DMatrix(new_item.values)
     print(xgb_model.predict(xginput))
     price_pred = xgb_model.predict(xginput)
