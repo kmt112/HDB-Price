@@ -38,6 +38,3 @@ async def prediction(item: Item):
     predicted_price = transform(json_compatible_item_data,shortest_cbd_area, shortest_primary_distance, shortest_mrt_distance)
     # transform(item)
     return predicted_price.tolist()[0]
-
-if name == 'main':
-    uvicorn.run('main:app', host='0.0.0.0', port=8000)
