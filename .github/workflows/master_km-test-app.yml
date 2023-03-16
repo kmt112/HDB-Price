@@ -53,7 +53,9 @@ jobs:
         with:
           name: python-app
           path: .
-          
+      - name: Stop webapp for FastAPI
+        run: |
+          az webapp stop --name km-test-app --resource-group oliver-test-rg
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
         id: deploy-to-webapp
@@ -61,3 +63,6 @@ jobs:
           app-name: 'km-test-app'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_20E92C9DF2B7434988D8F93EE268BACF }}
+      - name: Start webapp for FastAPI
+        run: |
+          az webapp start --name km-test-app --resource-group oliver-test-rg
