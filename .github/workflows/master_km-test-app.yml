@@ -53,6 +53,9 @@ jobs:
         with:
           name: python-app
           path: .
+      - uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
       - name: Stop webapp for FastAPI
         run: |
           az webapp stop --name km-test-app --resource-group oliver-test-rg
