@@ -42,11 +42,7 @@ Once the virtual environment is set up, the folder structure is as such:
 ```
 
 ### Built With
-
-
-- [![React][React.js]][React-url]
 - [![Flask][Flask]][flask-url]
-- [![Turborepo][Turborepo]][Turborepo-url]
 - [![FastAPI][FastAPI]][fastapi-url]
 
 
