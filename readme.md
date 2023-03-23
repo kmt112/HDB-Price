@@ -2,6 +2,8 @@
 ## Introduction
 This repository contains the resale HDB pricing exploratory data analysis, resale housing prediction modelling and resale pricing. All data is taken from https://data.gov.sg/dataset/resale-flat-prices. I have also written a two part blog post on medium (https://medium.com/p/94ab708cccf8). However, since those were done previously, i have decided to make this repo usable for others. Current Work in progress
 
+to access API https://km-home-app.azurewebsites.net/docs#/
+
 
 ## Data Cleaning
 This notebook creates new coordinates for all addresses (utilizing onemap API). The new coordinates are then used to calculate the closest distance between the HDB to closest MRT, Primary school and CDB area.
